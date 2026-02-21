@@ -1,0 +1,167 @@
+.container {
+	height: 250vh;
+	background-color: var(--bg-sub);
+	position: relative;
+	z-index: 80;
+}
+
+.stickyWrapper {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden; /* 幕がはみ出さないように */
+}
+
+.bgPanel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--primary);
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* overflow: visible にしないと車が消えてしまうので注意 */
+	overflow: visible;
+}
+
+.innerContent {
+	color: white;
+	font-weight: bold;
+}
+
+.carWrapper {
+	position: absolute;
+	/* 幕の右端に固定 */
+	left: 100%;
+	top: 50%;
+	font-size: 4rem;
+	white-space: nowrap;
+	display: inline-block;
+	will-change: transform;
+	margin-left: 50%;
+}
+
+.baseContent {
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: -10px;
+	padding: 0 40px;
+	text-align: center;
+}
+
+.contactText {
+	font-family: "bungee", sans-serif;
+	font-size: 8rem;
+	font-weight: 400;
+	font-style: normal;
+	color: var(--dark);
+	-webkit-text-stroke: 3px var(--dark);
+	padding: -50px 0px;
+	line-height: 1.1;
+}
+
+/* --連絡先-- */
+
+.innerContent {
+	width: 100%;
+	max-width: 600px;
+	padding: 40px 20px;
+	/* 幕が閉まったときに中央に見えるようにする */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.header h1 {
+	font-size: 5rem;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+	color: var(--dark);
+}
+
+.header p {
+	color: var(--secondary);
+	font-size: 0.9rem;
+}
+
+.linkList {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.linkItem {
+	display: flex;
+	align-items: center;
+	padding: 20px 25px;
+	background-color: #fff; /* カードは白 */
+	border: 2px solid var(--dark);
+	text-decoration: none;
+	color: inherit;
+	border-radius: 16px;
+}
+
+.iconBox {
+	width: 50px;
+	font-size: 1.5rem;
+	color: var(--primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 15px;
+}
+
+.info {
+	flex-grow: 1;
+}
+
+.linkName {
+	display: block;
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: var(--dark);
+}
+
+.linkId {
+	display: block;
+	font-size: 0.85rem;
+	color: var(--primary);
+}
+
+.labelTag {
+	font-size: 0.7rem;
+	font-weight: bold;
+	color: var(--primary);
+	border: 1px solid var(--primary);
+	padding: 2px 8px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.arrow {
+	margin-left: 15px;
+	color: var(--dark);
+	transition: 0.3s;
+}
+
+.linkItem:hover .arrow {
+	color: var(--primary);
+	transform: translateX(5px);
+}

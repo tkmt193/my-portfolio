@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "recursive-mono-casual-static", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+:root {
+	/* メインのオレンジ */
+	--primary: #ee8b4d;
+
+	/* 文字や背景に使うダークカラー */
+	--dark: #25201f;
+
+	/*濃いグレー */
+	--dark-gray: #69605e;
+
+	/* 薄いグレー */
+	--light-gray: #d2d0ce;
+
+	/* ベージュ（サブ背景） */
+	--bg-sub: #e8d9cd;
+
+	/* オフホワイト */
+	--bg-light: #fffefc;
+
+	/* レッド（アクセント）*/
+	--accent: #c41d3a;
+}

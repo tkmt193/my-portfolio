@@ -1,0 +1,23 @@
+.footer {
+	background-color: var(--dark);
+	/* サイドバーと同じ色で統一感を出す */
+	color: var(--bg-light);
+	padding: 60px 0 40px;
+	border-top: 1px solid rgba(255, 254, 252, 0.1);
+	/* 繊細な境界線 */
+	font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	text-align: center;
+}
+
+.copyright {
+	font-size: 0.85rem;
+	letter-spacing: 0.05em;
+	/* 文字の間隔を広げるとモダンに見えます */
+	opacity: 0.8;
+}
