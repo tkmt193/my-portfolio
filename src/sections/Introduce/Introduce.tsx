@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import maskGroup from "../../assets/woman.png";
 import "./Introduce.css";
 import type { Variants } from "motion/react";
@@ -51,7 +51,6 @@ const nameVariants: Variants = {
 	},
 };
 
-
 export default function Introduce({
 	active,
 	ref,
@@ -68,9 +67,9 @@ export default function Introduce({
 				animate={active ? "visible" : "hidden"}
 			>
 				<div className="images">
-					<div className="rectangle" ></div>
+					<div className="rectangle"></div>
 					<div className="div-dashed"></div>
-					<div className="square" ></div>
+					<div className="square"></div>
 					<img className="mask-group" alt="Ikumi Tsukamoto" src={maskGroup} />
 				</div>
 			</motion.div>

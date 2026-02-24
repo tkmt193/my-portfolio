@@ -1,5 +1,4 @@
 import "./App.css";
-import Home from "./sections/Home/Home";
 import Loading from "./components/Loading/Loading";
 import { useState, useEffect, useRef, useMemo } from "react";
 import About from "./sections/About/About";
