@@ -49,7 +49,7 @@ const TextAboutMe = ({
 						},
 					}}
 				>
-					<pre className={styles.text}>ABOUTME ABOUTME </pre>
+					<pre className={styles.text}>ABOUTME ABOUTME ABOUTME</pre>
 				</motion.div>
 			</motion.div>
 		</div>

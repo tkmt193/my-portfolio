@@ -31,24 +31,38 @@ function PortfolioCard({ category, title, description, imageText }: CardProps) {
 const works = [
 	{
 		id: "1",
-		category: "Graphic / Concept",
-		title: "自主制作プロジェクト 01",
-		description: "色の持つ印象を活かしたUI/UXデザインの練習課題です。",
+		category: "WEB",
+		title: "My Portfolio",
+		description: "A web portfolio built with React",
 		imageText: "Concept Design",
 	},
 	{
 		id: "2",
-		category: "Coding / React",
-		title: "ポートフォリオサイト",
-		description: "Reactを用いてコンポーネントベースで構築したサイト。",
+		category: "WEB",
+		title: "Coming Soon...",
+		description: "I am currently working on a new project.",
 		imageText: "Web Development",
 	},
 	{
 		id: "3",
-		category: "Design",
+		category: "WEB",
 		title: "Coming Soon...",
-		description: "現在、新しいプロジェクトを制作中です。",
-		imageText: "Illustration",
+		description: "I am currently working on a new project.",
+		imageText: "Web Development",
+	},
+	{
+		id: "4",
+		category: "WEB",
+		title: "Coming Soon...",
+		description: "I am currently working on a new project.",
+		imageText: "Web Development",
+	},
+	{
+		id: "5",
+		category: "WEB",
+		title: "Coming Soon...",
+		description: "I am currently working on a new project.",
+		imageText: "Web Development",
 	},
 ];
 

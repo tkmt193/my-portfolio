@@ -57,6 +57,9 @@
 
 .imageWrapper {
 	position: relative;
+	scale: -1 1;
+	width: 450px;
+	height: auto;
 }
 
 /* 装飾用の背景要素（水色の四角に相当） */
@@ -64,12 +67,13 @@
 	position: absolute;
 	inset: -3rem -1rem;
 	/* -inset-4 */
-	background-color: #69605e;
+	/* background-color: #69605e; */
 	/* パレットの白系 */
-	border-radius: 0.2rem;
+	border-radius: 10;
 	transform: rotate(6deg);
+	border: 5px dashed var(--dark);
 	/* height: 70vh; */
-	opacity: 0.3;
+	opacity: 0.5;
 }
 
 .profileImage {

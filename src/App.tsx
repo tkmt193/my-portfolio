@@ -8,6 +8,7 @@ import Contact from "./sections/Contact/Contact";
 import type { SectionId, SectionRefs } from "./type/sections";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Introduce from "./sections/Introduce/Introduce";
 
 function App() {
 	const [active, setActive] = useState(false);
@@ -16,19 +17,22 @@ function App() {
 	const isScrollingRef = useRef(false);
 
 	// 1. 各Ref自体を定義
-  const homeRef = useRef<HTMLElement>(null);
-  const aboutRef = useRef<HTMLElement>(null);
-  const portfolioRef = useRef<HTMLElement>(null);
-  const contactRef = useRef<HTMLElement>(null);
+	const homeRef = useRef<HTMLElement>(null);
+	const aboutRef = useRef<HTMLElement>(null);
+	const portfolioRef = useRef<HTMLElement>(null);
+	const contactRef = useRef<HTMLElement>(null);
 
-  // 2. それらをまとめたオブジェクトを useMemo で固定する
-  // これにより、再レンダリングされても sectionRefs は「同じもの」として扱われます
-  const sectionRefs: SectionRefs = useMemo(() => ({
-    home: homeRef,
-    about: aboutRef,
-    portfolio: portfolioRef,
-    contact: contactRef,
-  }), []);
+	// 2. それらをまとめたオブジェクトを useMemo で固定する
+	// これにより、再レンダリングされても sectionRefs は「同じもの」として扱われます
+	const sectionRefs: SectionRefs = useMemo(
+		() => ({
+			home: homeRef,
+			about: aboutRef,
+			portfolio: portfolioRef,
+			contact: contactRef,
+		}),
+		[],
+	);
 
 	/* ヘッダーからセクションの切り替え */
 	const scrollToSection = (id: SectionId) => {
@@ -126,7 +130,7 @@ function App() {
 				scrollToSection={scrollToSection}
 			/>
 			<div className="example">
-				<Home active={homeActive} ref={sectionRefs.home} />
+				<Introduce active={homeActive} ref={sectionRefs.home} />
 				<About ref={sectionRefs.about} />
 				<Portfolio ref={sectionRefs.portfolio} />
 				<Contact ref={sectionRefs.contact} />

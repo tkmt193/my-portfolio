@@ -6,9 +6,7 @@
 	right: 0;
 	z-index: 99;
 	background-color: var(--primary);
-	/* 背景：オレンジ */
 	color: var(--dark);
-	/* 文字：茶色 */
 	border-bottom: solid;
 }
 
@@ -16,34 +14,22 @@
 	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
-	padding: 1.25rem 2rem;
-	/* p-5 相当 */
+	padding: 0.8em 2rem;
 	align-items: center;
 	justify-content: space-between;
 }
 
 .logo {
-	/* --- ブラウザのデフォルトスタイルをリセット --- */
 	background: none;
-	/* 背景を消す */
 	border: none;
-	/* 枠線を消す */
 	padding: 0;
-	/* 内側の余白を消す */
-	font-family: inherit;
-	/* フォントを継承 */
+	font-family: var(--main-font-set);
+	font-weight: var(--main-weight);
 	line-height: inherit;
-	/* 行の高さを継承 */
-	color: inherit;
-	/* 文字色を継承 */
+	color: var(--dark);
 	text-align: left;
-	/* テキストを左寄せに（ボタンは中央寄せがデフォルトのため） */
 	appearance: none;
-	/* OS固有のスタイルを無効化 */
-
-	/* --- 元々のスタイル --- */
-	font-weight: 600;
-	font-size: 1.25rem;
+	font-size: 1.8rem;
 	cursor: pointer;
 	transition: opacity 0.3s;
 }
@@ -52,34 +38,24 @@
 	opacity: 0.7;
 }
 
-/* Tabキーで選択した時のアウトライン（アクセシビリティのため推奨） */
-.logo:focus-visible {
-	outline: 2px solid #007bff;
-	/* デザインに合わせて色は調整してください */
-	outline-offset: 4px;
-}
-
 .nav {
 	display: flex;
 	align-items: center;
 	gap: 1.5rem;
-	/* mr-5 の代わりに gap で余白を管理 */
 }
 
 .navButton {
 	background: none;
 	border: none;
 	color: var(--dark);
-	/* 文字：茶色 */
 	font-size: 1rem;
-	font-weight: 500;
+	font-weight: 600;
 	cursor: pointer;
 	padding: 0.5rem 0;
 	position: relative;
 	transition: color 0.3s;
 }
 
-/* 選択されている時の下線エフェクト */
 .active::after {
 	content: "";
 	position: absolute;
@@ -88,7 +64,6 @@
 	width: 100%;
 	height: 2px;
 	background-color: var(--dark);
-	/* 下線：茶色 */
 }
 
 .navButton:hover {

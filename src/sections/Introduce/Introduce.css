@@ -1,0 +1,165 @@
+.introduce {
+	display: grid;
+	width: auto;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	position: relative;
+	overflow: hidden;
+	justify-items: center;
+	background-color: #ee8b4d;
+	padding-bottom: 20px;
+}
+
+/* 重ねるための共通設定：#backを.backに修正 */
+.foword,
+.back {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	width: 100%;
+	height: 100%;
+}
+
+.foword {
+	display: flex;
+	width: 80%;
+	height: 100%;
+	z-index: 2;
+	/* 全体を中央に寄せるための土台 */
+	justify-content: center;
+}
+
+.right {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start; /* 右側のコンテンツを自分の右端（中央寄り）へ */
+	justify-content: flex-end;
+
+	/* 修正：padding-rightを増やすことで中央に押し出す */
+	padding-left: 100px;
+	padding-bottom: 40px;
+	gap: 10px;
+}
+
+.left {
+	flex: 1;
+	display: flex;
+	align-items: center; /* 垂直方向中央 */
+	justify-content: flex-start; /* 左側のコンテンツを自分の左端（中央寄り）へ */
+
+	/* 修正：padding-leftを増やすことで中央に押し出す */
+	padding-left: 20px;
+}
+
+/* 背面を流れる名前の透過文字 */
+.IKUMI-TSUKAMOTO {
+	-webkit-text-stroke: 3px rgba(255, 254, 252, 0.5);
+	color: transparent;
+	/* font-family: var(--title-font-set);
+	font-weight: var(--title-weight); */
+	font-family: var(--main-font-set);
+	font-weight: var(--main-weight);
+	font-size: 100px;
+	letter-spacing: 0;
+	line-height: 100px;
+	transform: rotate(90deg);
+	z-index: 0;
+	opacity: 0.8;
+}
+
+.text-wrapper {
+	color: #fffefc;
+
+	font-family: var(--main-font-set);
+	font-weight: var(--main-weight);
+	/* -webkit-text-stroke: 3px var(--dark); */
+	/* font-family: var(--title-font-set);
+	font-weight: var(--title-weight); */
+	font-size: 100px;
+	letter-spacing: 0;
+	line-height: 100px;
+}
+
+/* ボタン設定 */
+.button {
+	all: unset;
+	cursor: pointer;
+	align-items: center;
+	border: 2px solid #fffefc;
+	border-radius: 10px;
+	box-sizing: border-box;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 22px 56px;
+	z-index: 10;
+	transform: translateX(5%);
+	transition: background-color 0.2s;
+	margin-bottom: 25px;
+}
+
+.button:hover {
+	background-color: rgba(255, 254, 252, 0.1);
+}
+
+.text-wrapper-2 {
+	color: #ffffff;
+	font-family: var(--reqular-font);
+	font-weight: var(--reqular-weight);
+	font-size: 22px;
+	white-space: nowrap;
+}
+
+/* --- 背面レイヤー --- */
+.back {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	width: 1000px;
+	height: auto;
+}
+
+.images > * {
+	position: absolute;
+	margin: 0;
+}
+
+.rectangle {
+	background-color: rgba(105, 96, 94, 0.6);
+	width: 450px;
+	height: 450px;
+	transform: translateX(3%) translateY(-3%);
+}
+
+.div-dashed {
+	border: 3px dashed #25201f;
+	width: 700px;
+	height: 750px;
+	transform: rotate(-10deg) translateX(-5%) translateY(10%);
+	opacity: 0.2;
+}
+
+.square {
+	border: 3px solid #25201f;
+	width: 750px;
+	height: 770px;
+	transform: translateY(12%);
+	opacity: 0.5;
+}
+
+.mask-group {
+	width: auto;
+	height: 750px;
+
+	z-index: 3;
+	transform: scale(-1, 1) translateY(10%);
+	filter: brightness(93%);
+}

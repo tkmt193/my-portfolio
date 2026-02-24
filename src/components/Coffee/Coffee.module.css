@@ -1,23 +1,23 @@
 .coffee {
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: -20px;
 
-    .steam {
-        width: 70px;
-        height: auto;
-        margin-bottom: 10px;
-        transform: rotate(5deg);
-        z-index: 1;
-    }
+	.steam {
+		width: 70px;
+		height: auto;
+		margin-bottom: 10px;
+		transform: rotate(5deg);
+		z-index: 1;
+	}
 
-    .cup {
-        z-index: 1;
-        width: 80px;
-        height: auto;
-        transform: translateX(10%);
-        color: var(--dark);
-    }
+	.cup {
+		z-index: 1;
+		width: 80px;
+		height: auto;
+		transform: translateX(10%);
+		color: var(--dark);
+	}
 }

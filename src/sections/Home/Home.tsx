@@ -48,6 +48,22 @@ export default function Home({
 	return (
 		<section ref={ref} id="home" className={styles.homeSection}>
 			<div className={styles.container}>
+				{/* 右側のコンテンツ */}
+				<div className={styles.rightContent}>
+					<motion.div
+						className={styles.imageWrapper}
+						variants={imageVariants}
+						initial="hidden"
+						animate={active ? "visible" : "hidden"}
+					>
+						<div className={styles.imageDecoration}></div>
+						<img
+							src={woman}
+							alt="Ikumi Tsukamoto"
+							className={styles.profileImage}
+						/>
+					</motion.div>
+				</div>
 				{/* 左側のコンテンツ */}
 				<motion.div
 					className={styles.leftContent}
@@ -86,23 +102,6 @@ export default function Home({
 						Contact Me
 					</motion.button>
 				</motion.div>
-
-				{/* 右側のコンテンツ */}
-				<div className={styles.rightContent}>
-					<motion.div
-						className={styles.imageWrapper}
-						variants={imageVariants}
-						initial="hidden"
-						animate={active ? "visible" : "hidden"}
-					>
-						<div className={styles.imageDecoration}></div>
-						<img
-							src={woman}
-							alt="Ikumi Tsukamoto"
-							className={styles.profileImage}
-						/>
-					</motion.div>
-				</div>
 			</div>
 		</section>
 	);

@@ -8,7 +8,8 @@
 	position: relative;
 	z-index: 50;
 	overflow: hidden;
-	margin-top: 3000px;
+	margin-top: 4000px;
+	clip-path: ellipse(120vw 120vw at 50% 119.9vw);
 }
 
 .sectionHeader {
@@ -49,6 +50,8 @@
 	color: var(--bg-light);
 	margin-bottom: 50px;
 	text-align: center;
+	font-family: var(--main-font-set);
+	font-weight: var(--main-weight);
 }
 
 /* .card:hover {

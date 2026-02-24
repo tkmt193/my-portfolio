@@ -12,7 +12,7 @@
 }
 
 /* 2つのABOUT MEの間隔をゼロにするために追加 */
-.aboutContainer>*:not(.description) {
+.aboutContainer > *:not(.description) {
 	flex-shrink: 0;
 }
 
@@ -44,39 +44,29 @@
 }
 
 .text {
-	font-family: "bungee", sans-serif;
+	font-family: var(--main-font-set);
+	font-weight: var(--main-weight);
 	font-size: 12rem;
 	line-height: 1;
 	/* 1.5だと余白が多すぎるので 1 に */
 	margin: 0;
 	white-space: nowrap;
 	opacity: 0.8;
-
-	/* 文字の中を白に */
 	color: white;
-	/* 文字の枠線を黒に (太さは 2px 程度が Bungee フォントには合います) */
-	-webkit-text-stroke: 3px black;
-
-	/* 念のため、標準の text-stroke も指定（一部ブラウザ用） */
-	/* text-stroke: 2px black; */
+	-webkit-text-stroke: 4px black;
+	/* border:  3px black; */
 }
 
 .description {
-	/* 完全に中央固定 */
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	/* transform の translate は motion 側で上書きされるのを防ぐため、
-     CSS側では極力シンプルに定義するか、motionの style に統合します */
-	width: 90%;
-	max-width: 800px;
+	width: 65%;
 	z-index: 20;
 	color: white;
-	/* 背景に合わせて調整 */
 }
 
 .techstack {
 	font-weight: bold;
+	font-size: 1.5rem;
 }
 
 .highlight {
@@ -84,13 +74,15 @@
 	display: block;
 	/* 重要な一文を独立させて強調 */
 	margin-bottom: 2rem;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	/* 最初の挨拶だけ少し大きく */
 }
 
 .stackInfo {
+	font-size: 1.2rem;
 	margin-top: 0.8rem;
 	padding-left: 1.5rem;
+	line-height: 1.8rem;
 	border-left: 4px solid currentColor;
 	/* 現在の文字色と同じ色の線を左に入れる */
 }

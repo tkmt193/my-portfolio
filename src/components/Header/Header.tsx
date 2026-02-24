@@ -26,7 +26,7 @@ export default function Header({
 					className={styles.logo}
 					onClick={() => scrollToSection("home")}
 				>
-					Ikumi Tsukamoto
+					IKUMI'S PORTFOLIO
 				</button>
 
 				<nav className={styles.nav}>

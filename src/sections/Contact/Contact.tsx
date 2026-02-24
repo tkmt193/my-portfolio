@@ -1,5 +1,6 @@
 import styles from "./Contact.module.css";
 import { motion, useScroll, useTransform } from "motion/react";
+import car from "../../assets/car.png";
 
 const links = [
 	{
@@ -92,22 +93,20 @@ export default function Contact({
 					</div>
 					<motion.div
 						className={styles.carWrapper}
-						// 初期状態：右向き(-1) かつ 大きさ(5倍)
-						initial={{ scaleX: -1, scale: 3, y: "-40%" }}
+						initial={{ opacity: 0, y: "-50%", x: "-10%" }}
 						whileInView={{
-							scale: 5,
-							y: ["-50%", "-52%", "-50%", "-48%", "-50%"],
-							rotate: [0, 3, 0, -3, 0],
+							opacity: 1,
+							x: "0%",
+							y: ["-50%", "-53%", "-50%", "-47%", "-50%"],
 						}}
 						transition={{
-							scale: {
+							opacity: {
 								duration: 0.5,
-								// repeat:
+								ease: "easeInOut",
 							},
-							rotate: {
-								duration: 0.8,
-								repeat: Infinity,
-								ease: "linear",
+							x: {
+								duration: 0.5,
+								ease: "easeInOut",
 							},
 							y: {
 								duration: 0.8,
@@ -116,9 +115,9 @@ export default function Contact({
 							},
 						}}
 						// 幕の端っこなので amount: "some" または 0.1 くらいがスムーズです
-						viewport={{ once: false, amount: "some" }}
+						viewport={{ once: true, amount: 0.8 }}
 					>
-						🚗
+						<img src={car} alt="走行する車" className={styles.carImage} />
 					</motion.div>
 				</motion.div>
 			</div>
