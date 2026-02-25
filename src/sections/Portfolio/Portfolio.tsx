@@ -13,8 +13,9 @@ function PortfolioCard({ category, title, description, imageText }: CardProps) {
 		<motion.div
 			className={styles.card}
 			whileHover={{
-				scale: 1.3,
+				scale: 1.1,
 			}}
+			whileTap={{ scale: 0.95 }}
 		>
 			<div className={styles.cardImg}>
 				<span>{imageText}</span>
@@ -25,6 +26,7 @@ function PortfolioCard({ category, title, description, imageText }: CardProps) {
 				<p className={styles.cardDescription}>{description}</p>
 			</div>
 		</motion.div>
+		
 	);
 }
 

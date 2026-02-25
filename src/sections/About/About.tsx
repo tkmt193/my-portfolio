@@ -19,7 +19,7 @@ const TextAboutMe = ({
 			opacity: 1,
 		},
 		onscreen: {
-			y: !isTop ? "100%" : "-100%",
+			y: !isTop ? "25vh" : "-25vh",
 			opacity: 1,
 			transition: {
 				type: "spring",

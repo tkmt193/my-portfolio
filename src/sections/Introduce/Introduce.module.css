@@ -153,3 +153,95 @@
 	transform: scale(-1, 1) translateY(10%);
 	filter: brightness(93%);
 }
+
+/* --- レスポンシブ対応（768px以下） --- */
+@media (max-width: 768px) {
+    .introduce {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 80px;
+        overflow: hidden;
+    }
+
+    .foword {
+        width: 90%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .right {
+        padding-left: 0;
+        padding-bottom: 20px;
+        align-items: center;
+        text-align: center;
+        order: 2;
+    }
+
+    .left {
+        padding-left: 0;
+        margin-top: 20px;
+        order: 1;
+		align-items: flex-end;
+    }
+
+    .IKUMITSUKAMOTO {
+        font-size: 50px;
+        line-height: 50px;
+        transform: rotate(0deg);
+        text-align: center;
+        -webkit-text-stroke: 1.5px rgba(255, 254, 252, 0.4);
+		order: 1;
+    }
+
+    .textWrapper {
+        font-size: 40px;
+        line-height: 45px;
+        text-align: center;
+		margin-top: 30px;
+		margin-bottom: 10px;
+    }
+
+    .button {
+        padding: 15px 40px;
+        transform: translateX(0);
+        margin-bottom: 15px;
+		order: 2;
+    }
+
+    .textWrapper2 {
+        font-size: 18px;
+    }
+
+    .images {
+        width: 100%;
+        transform: scale(0.7);
+    }
+
+    .maskGroup {
+        height: 500px;
+        transform: scale(-1, 1) translateY(5%);
+    }
+
+    .rectangle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .divDashed, .square {
+        width: 90%;
+        height: 500px;
+    }
+}
+
+/* 非常に小さい画面（480px以下）への微調整 */
+@media (max-width: 480px) {
+    .textWrapper {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    
+    .IKUMITSUKAMOTO {
+        font-size: 40px;
+    }
+}
