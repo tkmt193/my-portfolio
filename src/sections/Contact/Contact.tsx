@@ -5,31 +5,35 @@ import car from "../../assets/car.png";
 const links = [
 	{
 		name: "X (Twitter)",
-		id: "@your_id",
-		url: "https://x.com/your_id",
+		id: "@mimimiT193",
+		url: "https://x.com/mimimiT193",
 		tag: "Updates",
 		icon: "fa-x-twitter",
+		prefix: "fa-brands",
 	},
 	{
 		name: "LinkedIn",
-		id: "Display Name",
-		url: "https://linkedin.com/in/your_id",
+		id: "Tsukamoto Ikumi",
+		url: "https://linkedin.com/in/tsukamotoikumi",
 		tag: "Career",
 		icon: "fa-linkedin-in",
+		prefix: "fa-brands",
 	},
 	{
 		name: "GitHub",
-		id: "your_id",
-		url: "https://github.com/your_id",
+		id: "tkmt193",
+		url: "https://github.com/tkmt193",
 		tag: "Code",
 		icon: "fa-github",
+		prefix: "fa-brands",
 	},
 	{
 		name: "Gmail",
-		id: "your.email@gmail.com",
-		url: "mailto:your.email@gmail.com",
+		id: "tsukamoto.ikumi@gmail.com",
+		url: "mailto:tsukamoto.ikumi@gmail.com",
 		tag: "Inquiry",
 		icon: "fa-envelope",
+		prefix: "fa-regular",
 	},
 ];
 
@@ -72,9 +76,7 @@ export default function Contact({
 									className={styles.linkItem}
 								>
 									<div className={styles.iconBox}>
-										<i
-											className={`fa-brands ${link.icon} ${link.name === "Gmail" ? "fa-regular" : ""}`}
-										></i>
+										<i className={`${link.prefix} ${link.icon}`}></i>
 									</div>
 									<div className={styles.info}>
 										<span className={styles.linkName}>{link.name}</span>
