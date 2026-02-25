@@ -115,7 +115,11 @@ function App() {
 				scrollToSection={scrollToSection}
 			/>
 			<div className="example">
-				<Introduce active={homeActive} ref={sectionRefs.home} />
+				<Introduce
+					active={homeActive}
+					ref={sectionRefs.home}
+					scrollToSection={scrollToSection}
+				/>
 				<About ref={sectionRefs.about} />
 				<Portfolio ref={sectionRefs.portfolio} />
 				<Contact ref={sectionRefs.contact} />

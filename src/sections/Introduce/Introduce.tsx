@@ -3,6 +3,7 @@ import maskGroup from "../../assets/woman.png";
 import styles from "./Introduce.module.css";
 import type { Variants } from "motion/react";
 import * as motion from "motion/react-client";
+import type { SectionId } from "../../type/sections";
 
 const imageVariants: Variants = {
 	hidden: { opacity: 0, y: 20 },
@@ -53,9 +54,11 @@ const nameVariants: Variants = {
 export default function Introduce({
 	active,
 	ref,
+	scrollToSection,
 }: {
 	active: boolean;
 	ref: React.RefObject<HTMLElement | null>;
+	scrollToSection: (id: SectionId) => void;
 }) {
 	return (
 		<section ref={ref} id="home" className={styles.introduce}>
@@ -87,7 +90,7 @@ export default function Introduce({
 					<motion.button
 						type="button"
 						className={styles.button}
-						onClick={() => {}}
+						onClick={() => scrollToSection("contact")}
 						variants={itemVariants}
 					>
 						<span className={styles.textWrapper2}>Contact Me</span>
