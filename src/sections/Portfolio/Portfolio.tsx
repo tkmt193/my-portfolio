@@ -26,7 +26,6 @@ function PortfolioCard({ category, title, description, imageText }: CardProps) {
 				<p className={styles.cardDescription}>{description}</p>
 			</div>
 		</motion.div>
-		
 	);
 }
 

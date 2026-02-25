@@ -1,130 +1,136 @@
 /* --- 元のデザイン（変更なし） --- */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    background-color: var(--primary);
-    color: var(--dark);
-    border-bottom: solid;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	background-color: var(--primary);
+	color: var(--dark);
+	border-bottom: solid;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    padding: 0.8em 2rem;
-    align-items: center;
-    justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	padding: 0.8em 2rem;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .logo {
-    background: none;
-    border: none;
-    padding: 0;
-    font-family: var(--main-font-set);
-    font-weight: var(--main-weight);
-    line-height: 2rem;
-    color: var(--dark);
-    text-align: left;
-    appearance: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    transition: opacity 0.3s;
+	background: none;
+	border: none;
+	padding: 0;
+	font-family: var(--main-font-set);
+	font-weight: var(--main-weight);
+	line-height: 2rem;
+	color: var(--dark);
+	text-align: left;
+	appearance: none;
+	font-size: 1.8rem;
+	cursor: pointer;
+	transition: opacity 0.3s;
 }
 
 .logo:hover {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
 .nav {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
 }
 
 .navButton {
-    background: none;
-    border: none;
-    color: var(--dark);
-    font-size: 1rem;
+	background: none;
+	border: none;
+	color: var(--dark);
+	font-size: 1rem;
 	line-height: 2rem;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: color 0.3s;
+	font-weight: 600;
+	cursor: pointer;
+	padding: 0.5rem 0;
+	position: relative;
+	transition: color 0.3s;
 }
 
 .active::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--dark);
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: var(--dark);
 }
 
 .navButton:hover {
-    opacity: 0.6;
+	opacity: 0.6;
 }
 
 /* --- 追加：ハンバーガーボタンの初期状態（PCでは隠す） --- */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    z-index: 100;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 20px;
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	z-index: 100;
 }
 
 .hamburger span {
-    width: 100%;
-    height: 2px;
-    background-color: var(--dark);
-    transition: all 0.3s ease;
+	width: 100%;
+	height: 2px;
+	background-color: var(--dark);
+	transition: all 0.3s ease;
 }
 
 /* --- レスポンシブ対応（768px以下のみ適用） --- */
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex; /* スマホで表示 */
-    }
+	.hamburger {
+		display: flex; /* スマホで表示 */
+	}
 
-    /* 三本線のアニメーション */
-    .open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-    .open span:nth-child(2) { opacity: 0; }
-    .open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+	/* 三本線のアニメーション */
+	.open span:nth-child(1) {
+		transform: translateY(9px) rotate(45deg);
+	}
+	.open span:nth-child(2) {
+		opacity: 0;
+	}
+	.open span:nth-child(3) {
+		transform: translateY(-9px) rotate(-45deg);
+	}
 
-    .nav {
-        /* PCの横並びを解除し、画面全体を覆うメニューにする */
-        display: none; 
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--primary);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-        z-index: 98;
-    }
+	.nav {
+		/* PCの横並びを解除し、画面全体を覆うメニューにする */
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: var(--primary);
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+		z-index: 98;
+	}
 
-    /* メニューが開いている時だけ表示 */
-    .navOpen {
-        display: flex;
-    }
+	/* メニューが開いている時だけ表示 */
+	.navOpen {
+		display: flex;
+	}
 
-    .navButton {
-        font-size: 1.5rem;
-    }
+	.navButton {
+		font-size: 1.5rem;
+	}
 }

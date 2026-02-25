@@ -91,39 +91,39 @@
 
 /* --- レスポンシブ対応（768px以下） --- */
 @media (max-width: 768px) {
-    .portfolioContainer {
-        clip-path: ellipse(150vw 200vw at 50% 199.5vw);
-        height: auto;
-        min-height: 100vh;
-        padding: 20px 0;
-    }
+	.portfolioContainer {
+		clip-path: ellipse(150vw 200vw at 50% 199.5vw);
+		height: auto;
+		min-height: 100vh;
+		padding: 20px 0;
+	}
 
-    .sectionHeader h2 {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
+	.sectionHeader h2 {
+		font-size: 1.8rem;
+		margin-bottom: 30px;
+	}
 
-    .card {
-        width: 280px;
-    }
+	.card {
+		width: 280px;
+	}
 
-    .cardImg {
-        height: 160px;
-    }
+	.cardImg {
+		height: 160px;
+	}
 
-    .cardBody {
-        padding: 16px;
-    }
+	.cardBody {
+		padding: 16px;
+	}
 
-    .cardTitle {
-        font-size: 1.1rem;
-    }
+	.cardTitle {
+		font-size: 1.1rem;
+	}
 
-    .cardDescription {
-        font-size: 0.85rem;
-    }
+	.cardDescription {
+		font-size: 0.85rem;
+	}
 
-    .worksGrid {
-        gap: 20px;
-    }
+	.worksGrid {
+		gap: 20px;
+	}
 }
