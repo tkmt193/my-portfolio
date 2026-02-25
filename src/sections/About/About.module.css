@@ -3,7 +3,6 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/* ABOUT MEを中央に寄せる */
 	align-items: center;
 	background-color: var(--primary);
 	position: sticky;
@@ -11,12 +10,10 @@
 	overflow: hidden;
 }
 
-/* 2つのABOUT MEの間隔をゼロにするために追加 */
 .aboutContainer > *:not(.description) {
 	flex-shrink: 0;
 }
 
-/* 開いた後はテキストを選択できるように設定 */
 .aboutContainer[data-state="open"] .description {
 	pointer-events: auto;
 }
@@ -24,23 +21,17 @@
 .tickerContainer {
 	width: 100vw;
 	height: 12rem;
-	/* 文字サイズと同じ高さにする */
 	overflow: visible;
 	display: flex;
 	align-items: center;
 	z-index: 30;
-	/* description より上に配置して最初は隠す */
 }
 
 .tickerWrapper {
 	display: flex;
-	/* 中の <pre> 要素を横一列に並べる */
 	white-space: nowrap;
-	/* テキストが途中で折り返されないように強制 */
 	width: max-content;
-	/* 中身のテキスト量に合わせて横幅を自動決定 */
 	will-change: transform;
-	/* ブラウザにアニメーションを通知して動きを滑らかにする */
 }
 
 .text {
@@ -48,13 +39,11 @@
 	font-weight: var(--main-weight);
 	font-size: 12rem;
 	line-height: 1;
-	/* 1.5だと余白が多すぎるので 1 に */
 	margin: 0;
 	white-space: nowrap;
 	opacity: 0.8;
 	color: white;
 	-webkit-text-stroke: 4px black;
-	/* border:  3px black; */
 }
 
 .description {
@@ -72,10 +61,8 @@
 .highlight {
 	font-weight: bold;
 	display: block;
-	/* 重要な一文を独立させて強調 */
 	margin-bottom: 2rem;
 	font-size: 2.5rem;
-	/* 最初の挨拶だけ少し大きく */
 }
 
 .stackInfo {
@@ -84,24 +71,15 @@
 	padding-left: 1.5rem;
 	line-height: 1.8rem;
 	border-left: 4px solid currentColor;
-	/* 現在の文字色と同じ色の線を左に入れる */
 }
 
 .background {
 	position: absolute;
-	/* top: 0; */
-	/* left: 0; */
 	width: 120%;
 	height: 120%;
-	/* 新しい背景色（ズームしてくる色） */
 	background-color: #69605e;
 	z-index: 1;
-	/* 最背面 */
 	overflow: hidden;
-	/* 円形から広がってほしい場合は border-radius を追加 */
-	/* border-radius: 10%;  */
-
-	/* 要素を画面中央に固定したままスケールさせるための基準点 */
 	transform-origin: center center;
 }
 
@@ -110,16 +88,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	/* 画像自体は常に中央固定 */
-
 	width: 100vw;
-	/* 画面の横幅いっぱい */
 	height: 100vh;
-	/* 画面の縦幅いっぱい */
 	object-fit: cover;
-	/* アスペクト比を保ちつつ隙間なく表示 */
-
-	/* 親要素(background)がscaleで小さくなっても、
-     画像が縮んで見えないように逆算して計算されるため、
-     実質的に画像自体の大きさは変わらず「可視範囲」だけが広がります */
 }

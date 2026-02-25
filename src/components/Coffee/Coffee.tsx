@@ -20,9 +20,7 @@ const CoffeeCup = () => {
 };
 
 function Coffee() {
-	// 湯気の3本の線を定義
 	const steamPaths = [
-		// 1本目：左側に少し大きく揺れる
 		{
 			index: 0,
 			id: "steam-left",
@@ -44,7 +42,7 @@ function Coffee() {
 		<div className={styles.coffee}>
 			<svg
 				className={styles.steam}
-				viewBox="450 350 180 180" // 湯気がある範囲にズーム
+				viewBox="450 350 180 180"
 				xmlns="http://www.w3.org/2000/svg"
 			>
 				<title>Decorative Steam Animation</title>
@@ -52,18 +50,18 @@ function Coffee() {
 					<motion.path
 						key={stream.id}
 						d={stream.d}
-						fill="var(--dark)" // 塗りつぶしを適用
+						fill="var(--dark)"
 						initial={{ opacity: 0, y: 20, x: 0 }}
 						animate={{
-							opacity: [0, 0.7, 0], // 現れて消える
-							y: [20, 0, -30], // 下から上へ昇る
-							x: [0, stream.index % 2 === 0 ? 5 : -5, 0], // 左右の揺らぎ
+							opacity: [0, 0.7, 0],
+							y: [20, 0, -30],
+							x: [0, stream.index % 2 === 0 ? 5 : -5, 0],
 						}}
 						transition={{
 							duration: 2,
 							repeat: Infinity,
-							delay: stream.index * 0.7, // 各湯気の時間差を広めに
-							ease: "easeInOut", // ぬるっとした動きに
+							delay: stream.index * 0.7,
+							ease: "easeInOut",
 						}}
 					/>
 				))}

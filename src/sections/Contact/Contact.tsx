@@ -40,26 +40,20 @@ export default function Contact({
 }) {
 	const { scrollYProgress } = useScroll({
 		target: ref,
-		// セクションが画面に入りきったところから、出始めるところまでを監視
 		offset: ["start start", "end end"],
 	});
 
-	// 背景パネル：左外(-100%) から 右端(100%) まで一気にスライドさせる
-	// [0, 1] の間で数値を調整して「幕が閉まりきるタイミング」を制御
 	const xBackground = useTransform(scrollYProgress, [0, 0.5], ["-100%", "0%"]);
 
 	return (
 		<section ref={ref} className={styles.container}>
-			{/* <p>contact</p> */}
 			<div className={styles.stickyWrapper}>
-				{/* 1. 下層：最初から見えているコンテンツ */}
 				<div className={styles.baseContent}>
 					<p className={styles.contactText}>
 						Please feel free to contact us. We will usually respond ASAP.
 					</p>
 				</div>
 
-				{/* 2. 上層：左から右へ上書きしていく幕 */}
 				<motion.div style={{ x: xBackground }} className={styles.bgPanel}>
 					<div className={styles.innerContent}>
 						<div className={styles.header}>
@@ -114,7 +108,6 @@ export default function Contact({
 								ease: "linear",
 							},
 						}}
-						// 幕の端っこなので amount: "some" または 0.1 くらいがスムーズです
 						viewport={{ once: true, amount: 0.8 }}
 					>
 						<img src={car} alt="走行する車" className={styles.carImage} />

@@ -54,11 +54,6 @@
 	font-weight: var(--main-weight);
 }
 
-/* .card:hover {
-	transform: translateY(-8px);
-	border-color: var(--primary);
-} */
-
 .cardImg {
 	width: 100%;
 	height: 200px;

@@ -2,9 +2,8 @@ import Coffee from "../Coffee/Coffee";
 import styles from "./Loading.module.css";
 import * as motion from "motion/react-client";
 
-//テキストアニメーションさせたい文字
 const words = "Loading...";
-//分割する
+
 const wordList = words.split("").map((char, index) => ({
 	id: index,
 	content: char,

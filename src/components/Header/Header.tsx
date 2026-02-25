@@ -10,7 +10,6 @@ export default function Header({
 	currentSection,
 	scrollToSection,
 }: HeaderProps) {
-	// ナビゲーション項目のリスト
 	const navItems: { id: SectionId; label: string }[] = [
 		{ id: "home", label: "Home" },
 		{ id: "about", label: "About" },

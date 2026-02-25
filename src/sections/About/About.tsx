@@ -13,7 +13,6 @@ const TextAboutMe = ({
 	const initialX = isForward ? "0%" : "-50%";
 	const animateX = isForward ? "-50%" : "0%";
 
-	// 「開き」の動き（親要素が whileInView になると連動する）
 	const spreadVariants: Variants = {
 		offscreen: {
 			y: 0,
@@ -23,20 +22,18 @@ const TextAboutMe = ({
 			y: !isTop ? "100%" : "-100%",
 			opacity: 1,
 			transition: {
-				type: "spring", // バウンスさせるための設定
-				stiffness: 100, // バネの強さ（大きいほど速く動く）
-				damping: 10, // バネの抵抗（小さいほどボヨヨンと長く揺れる）
-				mass: 0.8, // 重さ（大きいほど慣性が働く）
-				duration: 0.8, // 全体の長さの目安
+				type: "spring",
+				stiffness: 100,
+				damping: 10,
+				mass: 0.8,
+				duration: 0.8,
 			},
 		},
 	};
 
 	return (
 		<div className={styles.tickerContainer}>
-			{/* この div が「開き」を担当 */}
 			<motion.div variants={spreadVariants}>
-				{/* この div が「無限ループ」を担当 */}
 				<motion.div
 					className={styles.tickerWrapper}
 					initial={{ x: initialX }}
@@ -61,7 +58,6 @@ export default function About({
 }: {
 	ref: React.RefObject<HTMLElement | null>;
 }) {
-	// 説明のアニメーション
 	const descVariants: Variants = {
 		offscreen: {
 			opacity: 0,
@@ -82,14 +78,11 @@ export default function About({
 		},
 	};
 
-	// スクロール進捗を取得
 	const { scrollYProgress } = useScroll({
 		target: ref,
 		offset: ["start end", "end start"],
 	});
 
-	// スクロール 0.3 から 0.6 の間で、
-	// 四方の余白を 50%（中央に閉じた状態）から 0%（全開）にする
 	const clipInset = useTransform(
 		scrollYProgress,
 		[0.4, 0.6, 1.0],
@@ -104,7 +97,6 @@ export default function About({
 			whileInView="onscreen"
 			viewport={{ once: true, amount: 0.6 }} // 0.8だと厳しすぎるので少し下げました
 		>
-			{/* ズームする背景要素 */}
 			<motion.div className={styles.background} style={{ clipPath: clipInset }}>
 				<img src={background} alt=""></img>
 			</motion.div>

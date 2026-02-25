@@ -13,7 +13,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden; /* 幕がはみ出さないように */
+	overflow: hidden;
 }
 
 .bgPanel {
@@ -27,7 +27,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* overflow: visible にしないと車が消えてしまうので注意 */
 	overflow: visible;
 }
 
@@ -38,19 +37,15 @@
 
 .carWrapper {
 	position: absolute;
-	/* 幕の右端からさらに外側に配置 */
 	left: 100%;
 	top: 50%;
-	/* 画像の基準サイズを指定（お好みで調整してください） */
 	width: 700px;
 	height: auto;
-
 	white-space: nowrap;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	will-change: transform;
-	/* margin-left: 50%; は画像サイズに合わせて調整、または削除でもOK */
 	margin-left: 20px;
 }
 
@@ -92,7 +87,6 @@
 	width: 100%;
 	max-width: 600px;
 	padding: 40px 20px;
-	/* 幕が閉まったときに中央に見えるようにする */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -128,7 +122,7 @@
 	display: flex;
 	align-items: center;
 	padding: 20px 25px;
-	background-color: #fff; /* カードは白 */
+	background-color: #fff;
 	border: 2px solid var(--dark);
 	text-decoration: none;
 	color: inherit;

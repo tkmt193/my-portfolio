@@ -1,6 +1,6 @@
 import type React from "react";
 import maskGroup from "../../assets/woman.png";
-import "./Introduce.css";
+import styles from "./Introduce.module.css";
 import type { Variants } from "motion/react";
 import * as motion from "motion/react-client";
 
@@ -22,15 +22,14 @@ const containerVariants: Variants = {
 	visible: {
 		opacity: 1,
 		transition: {
-			// 子要素（h1, p, button）の開始を 0.3秒 ずつずらす
 			staggerChildren: 0.3,
-			delayChildren: 0.4, // 最初の要素が動き出すまでの待機時間
+			delayChildren: 0.4,
 		},
 	},
 };
 
 const itemVariants: Variants = {
-	hidden: { opacity: 0, x: -20 }, // 20px下から
+	hidden: { opacity: 0, x: -20 },
 	visible: {
 		opacity: 1,
 		x: 0,
@@ -59,47 +58,51 @@ export default function Introduce({
 	ref: React.RefObject<HTMLElement | null>;
 }) {
 	return (
-		<section ref={ref} id="home" className="introduce">
+		<section ref={ref} id="home" className={styles.introduce}>
 			<motion.div
-				className="back"
+				className={styles.back}
 				variants={imageVariants}
 				initial="hidden"
 				animate={active ? "visible" : "hidden"}
 			>
-				<div className="images">
-					<div className="rectangle"></div>
-					<div className="div-dashed"></div>
-					<div className="square"></div>
-					<img className="mask-group" alt="Ikumi Tsukamoto" src={maskGroup} />
+				<div className={styles.images}>
+					<div className={styles.rectangle}></div>
+					<div className={styles.divDashed}></div>
+					<div className={styles.square}></div>
+					<img
+						className={styles.maskGroup}
+						alt="Ikumi Tsukamoto"
+						src={maskGroup}
+					/>
 				</div>
 			</motion.div>
 
-			<div className="foword">
+			<div className={styles.foword}>
 				<motion.div
-					className="right"
+					className={styles.right}
 					variants={containerVariants}
 					initial="hidden"
 					animate={active ? "visible" : "hidden"}
 				>
 					<motion.button
 						type="button"
-						className="button"
+						className={styles.button}
 						onClick={() => {}}
 						variants={itemVariants}
 					>
-						<span className="text-wrapper-2">Contact Me</span>
+						<span className={styles.textWrapper2}>Contact Me</span>
 					</motion.button>
-					<motion.h1 className="text-wrapper" variants={itemVariants}>
+					<motion.h1 className={styles.textWrapper} variants={itemVariants}>
 						WEB DEVELOPER PORTFOLIO
 					</motion.h1>
 				</motion.div>
 				<motion.div
-					className="left"
+					className={styles.left}
 					variants={nameVariants}
 					initial="hidden"
 					animate={active ? "visible" : "hidden"}
 				>
-					<div className="IKUMI-TSUKAMOTO">
+					<div className={styles.IKUMITSUKAMOTO}>
 						IKUMI
 						<br />
 						TSUKAMOTO

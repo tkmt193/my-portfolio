@@ -25,7 +25,6 @@
 	width: 80%;
 	height: 100%;
 	z-index: 2;
-	/* 全体を中央に寄せるための土台 */
 	justify-content: center;
 }
 
@@ -33,10 +32,8 @@
 	flex: 2;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start; /* 右側のコンテンツを自分の右端（中央寄り）へ */
+	align-items: flex-start;
 	justify-content: flex-end;
-
-	/* 修正：padding-rightを増やすことで中央に押し出す */
 	padding-left: 100px;
 	padding-bottom: 40px;
 	gap: 10px;
@@ -45,19 +42,15 @@
 .left {
 	flex: 1;
 	display: flex;
-	align-items: center; /* 垂直方向中央 */
-	justify-content: flex-start; /* 左側のコンテンツを自分の左端（中央寄り）へ */
-
-	/* 修正：padding-leftを増やすことで中央に押し出す */
+	align-items: center;
+	justify-content: flex-start;
 	padding-left: 20px;
 }
 
 /* 背面を流れる名前の透過文字 */
-.IKUMI-TSUKAMOTO {
+.IKUMITSUKAMOTO {
 	-webkit-text-stroke: 3px rgba(255, 254, 252, 0.5);
 	color: transparent;
-	/* font-family: var(--title-font-set);
-	font-weight: var(--title-weight); */
 	font-family: var(--main-font-set);
 	font-weight: var(--main-weight);
 	font-size: 100px;
@@ -68,14 +61,11 @@
 	opacity: 0.8;
 }
 
-.text-wrapper {
+.textWrapper {
 	color: #fffefc;
 
 	font-family: var(--main-font-set);
 	font-weight: var(--main-weight);
-	/* -webkit-text-stroke: 3px var(--dark); */
-	/* font-family: var(--title-font-set);
-	font-weight: var(--title-weight); */
 	font-size: 100px;
 	letter-spacing: 0;
 	line-height: 100px;
@@ -103,7 +93,7 @@
 	background-color: rgba(255, 254, 252, 0.1);
 }
 
-.text-wrapper-2 {
+.textWrapper2 {
 	color: #ffffff;
 	font-family: var(--reqular-font);
 	font-weight: var(--reqular-weight);
@@ -139,7 +129,7 @@
 	transform: translateX(3%) translateY(-3%);
 }
 
-.div-dashed {
+.divDashed {
 	border: 3px dashed #25201f;
 	width: 700px;
 	height: 750px;
@@ -155,7 +145,7 @@
 	opacity: 0.5;
 }
 
-.mask-group {
+.maskGroup {
 	width: auto;
 	height: 750px;
 
