@@ -189,6 +189,7 @@
 	/* 車画像をタブレット向けに縮小 */
 	.carWrapper {
 		width: 500px;
+		left: 60%;
 	}
 
 	.contactText {
