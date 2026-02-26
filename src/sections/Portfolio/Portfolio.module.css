@@ -53,17 +53,6 @@
 	font-weight: var(--main-weight);
 }
 
-.cardImg {
-	width: 100%;
-	height: 200px;
-	background-color: var(--bg-sub);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--secondary);
-	font-size: 0.9rem;
-}
-
 .cardBody {
 	padding: 24px;
 }
@@ -77,16 +66,71 @@
 	margin-bottom: 8px;
 }
 
+/* .card の定義を a タグ用に最適化 */
+.card {
+	flex-shrink: 0;
+	width: 350px;
+	background: #fff;
+	border: 1px solid var(--border);
+
+	/* aタグに変更した際の追加設定 */
+	display: block; /* インラインからブロック要素へ */
+	text-decoration: none; /* 下線を消す */
+	color: inherit; /* 親要素の色を継承 */
+	cursor: pointer;
+	transition: transform 0.3s ease; /* motion以外での微調整用 */
+	overflow: hidden; /* 子要素の角丸などからはみ出さないように */
+}
+
+/* ホバー時に色が変わってしまわないよう明示的に指定 */
+.card:hover {
+	text-decoration: none;
+}
+
+/* カード内のテキストカラーを改めて固定（リンク色対策） */
 .cardTitle {
 	font-size: 1.25rem;
 	margin-bottom: 12px;
 	color: var(--dark);
+	display: block; /* aタグ内でのレイアウト安定化 */
 }
 
 .cardDescription {
 	font-size: 0.9rem;
 	color: var(--secondary);
 	line-height: 1.6;
+	display: block;
+}
+
+/* Zennの画像を表示するための img スタイル（既出分） */
+.cardImg {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+	background-color: var(--bg-sub);
+}
+
+.responsiveImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/* Portfolio.module.css への追記イメージ */
+.cardImg {
+	width: 100%;
+	height: 200px; /* 任意の高さ */
+	overflow: hidden;
+	position: relative;
+}
+
+.responsiveImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* 画像の比率を保ったまま枠を埋める */
+	display: block;
 }
 
 /* --- レスポンシブ対応（768px以下） --- */
